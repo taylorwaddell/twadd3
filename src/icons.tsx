@@ -3,6 +3,7 @@ import React from "react";
 export const Shaka: React.FC = () => {
   return (
     <svg
+      aria-hidden="true"
       className="social-icon"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1410 763.9"
@@ -251,28 +252,27 @@ export const StackIcons = {
   FramerMotion: () => (
     <div data-tooltip="Framer Motion">
       <svg
+        className="stack-icon framer"
+        id="framerMotion-icon"
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+        xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
-        width="11"
-        height="10"
-        viewBox="0 0 11 10"
-        className="arrow-container"
       >
-        <rect
-          className="arrow-shaft"
-          y="4.25"
-          width="10.5"
-          height="1.5"
-          rx="0.75"
-          fill="currentColor"
-        ></rect>
-        <path
-          d="M5.75 1L9.75 5L5.75 9"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        ></path>
+        <rect width="18" height="18" rx="2" />
+        <mask
+          id="mask0_69_45"
+          style={{ maskType: "luminance" }}
+          maskUnits="userSpaceOnUse"
+          x="6"
+          y="4"
+          width="6"
+          height="9"
+        >
+          <path d="M12 4H6V13H12V4Z" fill="currentColor" />
+        </mask>
+        <path d="M6 4H12V7H9L6 4ZM6 7H9L12 10H9V13L6 10V7Z" />
       </svg>
     </div>
   ),
@@ -285,4 +285,22 @@ export const IconDisplay: React.FC<{ stackLabel: StackOptionLabel }> = ({
 }) => {
   const IconComponent = StackIcons[stackLabel];
   return <>{IconComponent && <IconComponent />}</>;
+};
+
+export const FigmaIcon: React.FC = () => {
+  return (
+    <svg
+      aria-hidden="true"
+      className="social-icon button-small"
+      id="figma-icon"
+      viewBox="0 0 12 18"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M0 3.375C0 1.51088 1.46509 0 3.27273 0H8.72727C10.5349 0 12 1.51088 12 3.375C12 4.54837 11.4185 5.58337 10.5371 6.1875C11.4185 6.79163 12 7.82663 12 9C12 10.8641 10.5349 12.375 8.72727 12.375C7.88945 12.375 7.12364 12.0499 6.54545 11.5155V14.625C6.54545 16.4891 5.08036 18 3.27273 18C1.46509 18 0 16.4891 0 14.625C0 13.4505 0.581454 12.4177 1.46291 11.8125C0.581454 11.2073 0 10.1745 0 9C0 7.82663 0.581454 6.79163 1.46291 6.1875C0.581454 5.58337 0 4.54837 0 3.375ZM3.27273 5.625C2.06727 5.625 1.09091 4.61813 1.09091 3.375C1.09091 2.13187 2.06727 1.125 3.27273 1.125H5.45455V5.625H3.27273ZM5.45455 6.75H3.27273C2.06727 6.75 1.09091 7.75687 1.09091 9C1.09091 10.2431 2.06727 11.25 3.27273 11.25H5.45455V6.75ZM5.45455 12.375H3.27273C2.06727 12.375 1.09091 13.3819 1.09091 14.625C1.09091 15.8681 2.06727 16.875 3.27273 16.875C4.47818 16.875 5.45455 15.8681 5.45455 14.625V12.375ZM8.72727 6.75C7.52182 6.75 6.54545 7.75687 6.54545 9C6.54545 10.2431 7.52182 11.25 8.72727 11.25C9.93273 11.25 10.9091 10.2431 10.9091 9C10.9091 7.75687 9.93273 6.75 8.72727 6.75ZM8.72727 5.625C9.93273 5.625 10.9091 4.61813 10.9091 3.375C10.9091 2.13187 9.93273 1.125 8.72727 1.125H6.54545V5.625H8.72727Z"
+      />
+    </svg>
+  );
 };
