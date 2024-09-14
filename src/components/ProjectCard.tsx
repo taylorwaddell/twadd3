@@ -25,7 +25,7 @@ export default function ProjectCard({
   ));
 
   return (
-    <div className="card delay-show">
+    <div className="card delay-show show">
       <div className="flex justify-content-between align-center">
         <h3>{title}</h3>
         <div className="flex align-center gap-1">

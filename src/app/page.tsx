@@ -17,6 +17,7 @@ export default function Home() {
       stackLabels={project.stackLabels}
     />
   ));
+
   return (
     <>
       <header className="flex justify-content-between align-center">
@@ -53,23 +54,36 @@ export default function Home() {
           </Link>
         </div>
       </header>
-      <main>
-        <h1>About</h1>
-        <p className="cushy delay-show">
-          I&apos;m <strong>Taylor Waddell</strong>, a{" "}
-          <strong>UX Developer</strong> at{" "}
-          <a href="https://verisglobal.com/" target="_blank">
-            Veris Global
-          </a>
-          , where I <span className="underline-best">create</span> easy-to-use
-          components, <span className="underline-best">lead</span> projects to
-          enhance user experience, and{" "}
-          <span className="underline-best">develop</span> design systems.
-        </p>
-        <h2>Writing</h2>
-        <WritingCard title="Dev Notes - 01" link="https://read.cv/twadd" />
-        <h2>Projects</h2>
-        {projects}
+      <main className="grid-container">
+        <div>
+          <article className="grid-item">
+            <h1>About</h1>
+            <p className="cushy delay-show">
+              I&apos;m <strong>Taylor Waddell</strong>, a{" "}
+              <strong>UX Developer</strong> at{" "}
+              <a href="https://verisglobal.com/" target="_blank">
+                Veris Global
+              </a>
+              , where I <span className="underline-best">create</span>{" "}
+              easy-to-use components,{" "}
+              <span className="underline-best">lead</span> projects to enhance
+              user experience, and{" "}
+              <span className="underline-best">develop</span> design systems.
+            </p>
+          </article>
+          <section>
+            <h2>Writing</h2>
+            <WritingCard
+              title="Dev Notes - 01"
+              link="https://read.cv/twadd"
+              className="show"
+            />
+          </section>
+        </div>
+        <section>
+          <h2>Projects</h2>
+          {projects}
+        </section>
       </main>
     </>
   );
