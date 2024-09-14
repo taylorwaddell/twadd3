@@ -26,14 +26,14 @@ export const ReadCV: React.FC = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M11.737 7.958a.75.75 0 10-.389 1.45l7.245 1.94A.75.75 0 1018.98 9.9l-7.244-1.94zM10.896 11.098a.75.75 0 00-.389 1.448l7.245 1.942a.75.75 0 00.388-1.45l-7.245-1.94zM9.136 14.767a.75.75 0 01.918-.53l4.83 1.294a.75.75 0 01-.388 1.449l-4.83-1.294a.75.75 0 01-.53-.919z"
         fill="currentColor"
       ></path>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M16.5 23.987L6.841 21.4a2.75 2.75 0 01-1.944-3.368L8.132 5.957A2.75 2.75 0 0111.5 4.013L21.16 6.6a2.75 2.75 0 011.944 3.368l-3.236 12.074a2.75 2.75 0 01-3.368 1.944zM6.345 18.42a1.25 1.25 0 00.884 1.531l9.66 2.588a1.25 1.25 0 001.53-.883L21.655 9.58a1.25 1.25 0 00-.884-1.531L11.11 5.46a1.25 1.25 0 00-1.53.884L6.345 18.42z"
         fill="currentColor"
       ></path>
@@ -89,10 +89,200 @@ export const CTAArrow: React.FC = () => {
         d="M5.75 1L9.75 5L5.75 9"
         fill="none"
         stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       ></path>
     </svg>
   );
+};
+
+export const StackIcons = {
+  HTML: () => (
+    <div data-tooltip="HTML">
+      <svg
+        className="stack-icon"
+        id="html5-icon"
+        aria-hidden="true"
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="18" height="18" rx="2" />
+        <path
+          fill="currentColor"
+          d="M12.8322 6.55556L13 5H5L5.44755 9.77778H10.986L10.8182 11.8333L9.02797 12.3333L7.23776 11.8333L7.12587 10.6111H5.5035L5.72727 13.0556L9.02797 14L12.2727 13.0556L12.7203 8.22222H6.9021L6.73427 6.55556H12.8322Z"
+        />
+      </svg>
+    </div>
+  ),
+  CSS: () => (
+    <div data-tooltip="CSS">
+      <svg
+        className="stack-icon"
+        id="css3-icon"
+        aria-hidden="true"
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="18" height="18" rx="2" />
+        <path
+          fill="currentColor"
+          d="M5.16667 6.56522L5 5H13L12.2778 13.1056L9 14L5.77778 13.1056L5.55556 10.5901H7.11111L7.27778 11.9317L9 12.3789L10.7778 11.9317L11 9.80745H5.5L5.33333 8.24224H11L11.1667 6.56522H5.16667Z"
+        />
+      </svg>
+    </div>
+  ),
+  JavaScript: () => (
+    <div data-tooltip="JavaScript">
+      <svg
+        className="stack-icon"
+        id="javascript-icon"
+        aria-hidden="true"
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="18" height="18" rx="2" />
+        <path
+          fill="currentColor"
+          d="M9.2 15.088C8.08 15.088 7.536 14.432 7.304 13.448L8.344 13.16C8.512 13.768 8.736 14.096 9.224 14.096C9.792 14.096 10.024 13.744 10.024 13.032V9.4H11.168V12.952C11.168 14.328 10.536 15.088 9.2 15.088ZM14.1009 15.088C13.2609 15.088 12.6289 14.752 12.1489 14.232L12.8529 13.448C13.2449 13.848 13.6769 14.104 14.1249 14.104C14.6209 14.104 14.8849 13.888 14.8849 13.52C14.8849 13.16 14.7249 12.96 13.9249 12.656C12.7569 12.208 12.2929 11.808 12.2929 10.896C12.2929 9.968 12.9969 9.312 14.1169 9.312C14.9809 9.312 15.4849 9.6 15.9409 10.056L15.2369 10.864C14.8289 10.472 14.5329 10.296 14.0689 10.296C13.6049 10.296 13.4129 10.528 13.4129 10.816C13.4129 11.16 13.5889 11.32 14.3489 11.624C15.5489 12.08 16.0209 12.52 16.0209 13.44C16.0209 14.48 15.2369 15.088 14.1009 15.088Z"
+        />
+      </svg>
+    </div>
+  ),
+  TypeScript: () => (
+    <div className="flex justify-center align-center typescript-icon-container">
+      <div data-tooltip="TypeScript">
+        <svg
+          className="typescript-icon"
+          aria-hidden="true"
+          viewBox="1 1 25 25"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="24" height="24"></rect>
+          <path d="m.98608 0h24.32332c.5446 0 .9861.436522.9861.975v24.05c0 .5385-.4415.975-.9861.975h-24.32332c-.544597 0-.98608-.4365-.98608-.975v-24.05c0-.538478.441483-.975.98608-.975zm13.63142 13.8324v-2.1324h-9.35841v2.1324h3.34111v9.4946h2.6598v-9.4946zm1.0604 9.2439c.4289.2162.9362.3784 1.5218.4865.5857.1081 1.2029.1622 1.8518.1622.6324 0 1.2331-.0595 1.8023-.1784.5691-.1189 1.0681-.3149 1.497-.5879s.7685-.6297 1.0187-1.0703.3753-.9852.3753-1.6339c0-.4703-.0715-.8824-.2145-1.2365-.1429-.3541-.3491-.669-.6186-.9447-.2694-.2757-.5925-.523-.9692-.7419s-.8014-.4257-1.2743-.6203c-.3465-.1406-.6572-.2771-.9321-.4095-.275-.1324-.5087-.2676-.7011-.4054-.1925-.1379-.3409-.2838-.4454-.4379-.1045-.154-.1567-.3284-.1567-.523 0-.1784.0467-.3392.1402-.4824.0935-.1433.2254-.2663.3959-.369s.3794-.1824.6269-.2392c.2474-.0567.5224-.0851.8248-.0851.22 0 .4523.0162.697.0486.2447.0325.4908.0825.7382.15.2475.0676.4881.1527.7218.2555.2337.1027.4495.2216.6475.3567v-2.4244c-.4015-.1514-.84-.2636-1.3157-.3365-.4756-.073-1.0214-.1095-1.6373-.1095-.6268 0-1.2207.0662-1.7816.1987-.5609.1324-1.0544.3392-1.4806.6203s-.763.6392-1.0104 1.0743c-.2475.4352-.3712.9555-.3712 1.5609 0 .7731.2268 1.4326.6805 1.9785.4537.546 1.1424 1.0082 2.0662 1.3866.363.146.7011.2892 1.0146.4298.3134.1405.5842.2865.8124.4378.2282.1514.4083.3162.5403.4946s.198.3811.198.6082c0 .1676-.0413.323-.1238.4662-.0825.1433-.2076.2676-.3753.373s-.3766.1879-.6268.2473c-.2502.0595-.5431.0892-.8785.0892-.5719 0-1.1383-.0986-1.6992-.2959-.5608-.1973-1.0805-.4933-1.5589-.8879z"></path>
+        </svg>
+      </div>
+    </div>
+  ),
+  Next: () => (
+    <div data-tooltip="Next.js">
+      <svg
+        className="stack-icon"
+        id="nextjs-icon-2"
+        height="16"
+        strokeLinejoin="round"
+        viewBox="0 0 16 16"
+        width="16"
+        aria-hidden="true"
+      >
+        <defs>
+          <linearGradient
+            id="paint0_linear_53_108"
+            x1="11.13"
+            y1="5"
+            x2="11.13"
+            y2="11"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="currentColor" offset="0"></stop>
+            <stop
+              offset="0.609375"
+              stopColor="currentColor"
+              stopOpacity="0.57"
+            ></stop>
+            <stop
+              offset="0.796875"
+              stopColor="currentColor"
+              stopOpacity="0"
+            ></stop>
+            <stop offset="1" stopColor="currentColor" stopOpacity="0"></stop>
+          </linearGradient>
+          <linearGradient
+            id="paint1_linear_53_108"
+            x1="9.9375"
+            y1="9.0625"
+            x2="13"
+            y2="12.875"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="currentColor" offset="0"></stop>
+            <stop offset="1" stopColor="currentColor" stopOpacity="0"></stop>
+          </linearGradient>
+          <clipPath id="clip0_53_108">
+            <rect
+              width="16"
+              height="16"
+              fill="currentColor"
+              rx="1"
+              ry="1"
+            ></rect>
+          </clipPath>
+        </defs>
+        <rect
+          className="fill-color-base"
+          width="16"
+          height="16"
+          rx="1"
+          ry="1"
+        ></rect>
+        <g clipPath="url(#clip0_53_108)">
+          <path
+            d="M10.63 11V5"
+            stroke="url(#paint0_linear_53_108)"
+            strokeWidth="1.25"
+            strokeMiterlimit="1.41421"
+          ></path>
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M5.995 5.00087V5H4.745V11H5.995V6.96798L12.3615 14.7076C12.712 14.4793 13.0434 14.2242 13.353 13.9453L5.99527 5.00065L5.995 5.00087Z"
+            fill="url(#paint1_linear_53_108)"
+          ></path>
+        </g>
+      </svg>
+    </div>
+  ),
+  FramerMotion: () => (
+    <div data-tooltip="Framer Motion">
+      <svg
+        aria-hidden="true"
+        width="11"
+        height="10"
+        viewBox="0 0 11 10"
+        className="arrow-container"
+      >
+        <rect
+          className="arrow-shaft"
+          y="4.25"
+          width="10.5"
+          height="1.5"
+          rx="0.75"
+          fill="currentColor"
+        ></rect>
+        <path
+          d="M5.75 1L9.75 5L5.75 9"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        ></path>
+      </svg>
+    </div>
+  ),
+};
+
+export type StackOptionLabel = keyof typeof StackIcons;
+
+export const IconDisplay: React.FC<{ stackLabel: StackOptionLabel }> = ({
+  stackLabel,
+}) => {
+  const IconComponent = StackIcons[stackLabel];
+  return <>{IconComponent && <IconComponent />}</>;
 };

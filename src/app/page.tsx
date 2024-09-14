@@ -1,6 +1,7 @@
 import { Github, ReadCV, Shaka, X } from "~/icons";
 
 import Link from "next/link";
+import ProjectCard from "~/components/ProjectCard";
 import WritingCard from "~/components/WritingCard";
 
 export default function Home() {
@@ -53,7 +54,18 @@ export default function Home() {
           enhance user experience, and{" "}
           <span className="underline-best">develop</span> design systems.
         </p>
+        <h2>Writing</h2>
         <WritingCard title="Dev Notes - 01" link="https://read.cv/twadd" />
+        <h2>Projects</h2>
+        <ProjectCard
+          title="twadd.dev"
+          description="My little piece of the internet. Built with the basics for optimal speed and a fun challenge."
+          linkProp={{
+            label: "View on Figma",
+            href: "https://www.figma.com/file/BJ9e0q7IItXt5P0uPIzhoF/twadd.dev-2.0?type=design&node-id=0%3A1&mode=design&t=jAMtdG4WF2jfh0pE-1",
+          }}
+          stackLabels={["Next", "TypeScript", "CSS"]}
+        />
       </main>
     </>
   );

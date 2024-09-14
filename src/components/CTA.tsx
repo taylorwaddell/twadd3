@@ -8,7 +8,7 @@ interface CTAProps {
 
 export default function CTA({ label, href }: CTAProps) {
   return (
-    <Link className="cta" href={href}>
+    <Link className="cta flex gap-1 align-center" href={href}>
       {label}
       <CTAArrow />
     </Link>
