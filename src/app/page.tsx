@@ -1,39 +1,60 @@
-import Link from "next/link";
+import { Github, ReadCV, Shaka, X } from "~/icons";
 
-import styles from "./index.module.css";
+import Link from "next/link";
+import WritingCard from "~/components/WritingCard";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.container}>
-        <h1 className={styles.title}>
-          Create <span className={styles.pinkSpan}>T3</span> App
-        </h1>
-        <div className={styles.cardRow}>
+    <>
+      <header className="flex justify-content-between align-center">
+        <div id="shakaCircle" aria-hidden="true">
+          <Shaka />
+        </div>
+        <div className="flex gap-1">
           <Link
-            className={styles.card}
-            href="https://create.t3.gg/en/usage/first-steps"
+            className="button button-icon flex justify-center align-center"
+            data-tooltip="Read.cv"
+            aria-label="Read.cv"
+            href="https://read.cv/twadd"
             target="_blank"
           >
-            <h3 className={styles.cardTitle}>First Steps →</h3>
-            <div className={styles.cardText}>
-              Just the basics - Everything you need to know to set up your
-              database and authentication.
-            </div>
+            <ReadCV />
           </Link>
           <Link
-            className={styles.card}
-            href="https://create.t3.gg/en/introduction"
+            className="button button-icon flex justify-center align-center"
+            data-tooltip="Github"
+            aria-label="Github"
+            href="https://github.com/taylorwaddell"
             target="_blank"
           >
-            <h3 className={styles.cardTitle}>Documentation →</h3>
-            <div className={styles.cardText}>
-              Learn more about Create T3 App, the libraries it uses, and how to
-              deploy it.
-            </div>
+            <Github />
+          </Link>
+          <Link
+            className="button button-icon flex justify-center align-center"
+            data-tooltip="X"
+            aria-label="X"
+            href="https://x.com/t__wadd"
+            target="_blank"
+          >
+            <X />
           </Link>
         </div>
-      </div>
-    </main>
+      </header>
+      <main>
+        <h1>About</h1>
+        <p className="cushy delay-show">
+          I&apos;m <strong>Taylor Waddell</strong>, a{" "}
+          <strong>UX Developer</strong> at{" "}
+          <a href="https://verisglobal.com/" target="_blank">
+            Veris Global
+          </a>
+          , where I <span className="underline-best">create</span> easy-to-use
+          components, <span className="underline-best">lead</span> projects to
+          enhance user experience, and{" "}
+          <span className="underline-best">develop</span> design systems.
+        </p>
+        <WritingCard title="Dev Notes - 01" link="https://read.cv/twadd" />
+      </main>
+    </>
   );
 }
