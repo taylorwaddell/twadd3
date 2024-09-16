@@ -10,7 +10,7 @@ import path from "node:path";
 
 const contentSource = "src/app/writing/content";
 
-export function getWritings() {
+function getWritings() {
   const targets = fs.readdirSync(path.join(process.cwd(), contentSource), {
     recursive: true,
   });
