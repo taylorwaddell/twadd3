@@ -4,7 +4,6 @@ import path from "node:path";
 import rehypeHighlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
-import useMDXComponents from "~/mdx-components";
 
 interface Params {
   params: {
@@ -41,7 +40,7 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function DocsPage({ params }: Params) {
+export default async function Page({ params }: Params) {
   const source = fs.readFileSync(
     path.join(process.cwd(), contentSource, params.slug.join("/")) + ".mdx",
     "utf8"

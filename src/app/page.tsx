@@ -4,8 +4,46 @@ import Link from "next/link";
 import ProjectCard from "~/components/ProjectCard";
 import { Projects } from "~/data/Projects";
 import WritingCard from "~/components/WritingCard";
+import { camelToHuman } from "~/utilites";
+import fs from "node:fs";
+import path from "node:path";
+
+const contentSource = "src/app/writing/content";
+
+export function getWritings() {
+  const targets = fs.readdirSync(path.join(process.cwd(), contentSource), {
+    recursive: true,
+  });
+
+  const files = [];
+
+  for (const target of targets) {
+    if (
+      fs
+        .lstatSync(path.join(process.cwd(), contentSource, target.toString()))
+        .isDirectory()
+    ) {
+      continue;
+    }
+
+    files.push(target);
+  }
+
+  return files.map((file) => {
+    const base = file.toString().replace(".mdx", "");
+    return { title: camelToHuman(base.replace("-", " ")), slug: base };
+  });
+}
 
 export default function Home() {
+  const writings = getWritings().map((w, i) => (
+    <WritingCard
+      key={i}
+      title={w.title}
+      link={"/writing/" + w.slug}
+      className="show"
+    />
+  ));
   const projects = Projects.map((project, i) => (
     <ProjectCard
       key={i}
@@ -73,11 +111,7 @@ export default function Home() {
           </article>
           <section>
             <h2>Writing</h2>
-            <WritingCard
-              title="Dev Notes - 01"
-              link="https://read.cv/twadd"
-              className="show"
-            />
+            {writings}
           </section>
         </div>
         <section>
