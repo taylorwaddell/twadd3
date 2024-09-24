@@ -60,5 +60,5 @@ export default async function Page({ params }: Params) {
     components,
   });
 
-  return <div>{content}</div>;
+  return <div className="reader">{content}</div>;
 }

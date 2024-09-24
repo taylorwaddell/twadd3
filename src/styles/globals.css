@@ -1,4 +1,5 @@
 @import url("./variables.css");
+@import url("./highlightjs-theme.css");
 
 html {
   background-color: var(--color-base);
@@ -32,14 +33,12 @@ header {
 h1,
 h2 {
   font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-heading-1);
   letter-spacing: var(--letter-spacing-comfortable);
   color: var(--color-font-muted);
 }
 
 h3 {
   margin: 0px;
-  font-size: var(--font-size-heading-3);
 }
 
 p {
@@ -97,10 +96,43 @@ section .delay-show.show {
   text-decoration: underline;
 }
 
+.reader h1,
+.reader h2,
+.reader h3,
+.reader h4,
+.reader h1 a,
+.reader h2 a,
+.reader h3 a,
+.reader h4 a {
+  color: var(--color-green);
+  letter-spacing: var(--letter-spacing-comfortable);
+  margin-top: var(--margin-3);
+  margin-bottom: var(--margin-\.5);
+}
+
+.reader h5 {
+  margin-top: var(--margin-\.5);
+  margin-bottom: var(--margin-\.5);
+}
+
+.reader h5 a {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-regular);
+}
+
+.reader a::after {
+  content: "↗";
+}
+
+.reader h4 a::after {
+  content: "";
+}
+
 .reader h4 a {
   width: fit-content;
   text-decoration: none;
 }
+
 .reader h4 a::before {
   content: "# ";
   position: absolute;
@@ -108,28 +140,13 @@ section .delay-show.show {
   opacity: 0;
   transition: opacity ease-out 150ms;
 }
+
 .reader h4:hover a::before {
   opacity: 1;
 }
+
 .reader h4 a:focus::before {
   opacity: 1;
-}
-
-article.reader {
-  margin-top: 1rem;
-}
-.reader h4 {
-  margin-top: 0px;
-}
-
-.reader p {
-  margin-bottom: 3rem;
-}
-
-.reader {
-  font-family: "livory", serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .link-fancy svg {
@@ -475,3 +492,5 @@ article.reader {
     grid-template-columns: 1fr;
   }
 }
+
+/* Custom Highlight.js theme */
