@@ -121,7 +121,14 @@ section .delay-show.show {
 }
 
 .reader a::after {
-  content: "↗";
+  content: " ↗";
+  position: relative;
+  bottom: -1px;
+  left: -1px;
+}
+.reader a:hover::after {
+  bottom: 1px;
+  left: 1px;
 }
 
 .reader h4 a::after {
