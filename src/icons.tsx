@@ -98,6 +98,36 @@ export const CTAArrow: React.FC = () => {
   );
 };
 
+export const CTAArrowLeft: React.FC = () => {
+  return (
+    <svg
+      aria-hidden="true"
+      width="11"
+      height="10"
+      viewBox="0 0 11 10"
+      className="arrow-container arrow-container-left"
+    >
+      <rect
+        className="arrow-shaft arrow-shaft-left"
+        x="0.5"
+        y="4.25"
+        width="10.5"
+        height="1.5"
+        rx="0.75"
+        fill="currentColor"
+      ></rect>
+      <path
+        d="M5.25 1L1.25 5L5.25 9"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>
+    </svg>
+  );
+};
+
 export const StackIcons = {
   HTML: () => (
     <div data-tooltip="HTML">

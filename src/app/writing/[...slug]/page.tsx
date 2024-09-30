@@ -1,3 +1,4 @@
+import CTA from "~/components/CTA";
 import { compileMDX } from "next-mdx-remote/rsc";
 import fs from "node:fs";
 import path from "node:path";
@@ -60,5 +61,12 @@ export default async function Page({ params }: Params) {
     components,
   });
 
-  return <div className="reader">{content}</div>;
+  return (
+    <>
+      <div className="mini-nav">
+        <CTA label="Back" href={"/"} leftArrow={true} />
+      </div>
+      <div className="reader">{content}</div>
+    </>
+  );
 }

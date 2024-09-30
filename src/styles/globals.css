@@ -11,13 +11,14 @@ body {
   padding-top: calc(100% / 65);
   width: 825px;
   margin: 0 auto;
+  position: relative;
 }
 
 *:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--color-base-light), 0 0 0 4px var(--color-orange);
-
-  transition: box-shadow var(--transition);
+  outline: 2px solid var(--color-orange);
+  outline-offset: 2px;
+  position: relative;
+  z-index: 1001;
 }
 
 a {
@@ -123,6 +124,7 @@ section .delay-show.show {
 .reader a::after {
   content: " ↗";
   position: relative;
+  z-index: -1;
   bottom: -1px;
   left: -1px;
 }
@@ -183,8 +185,6 @@ section .delay-show.show {
   border-radius: var(--border-round);
   padding: var(--padding-button);
   cursor: pointer;
-
-  transition: all var(--transition-out);
 }
 
 .button-icon {
@@ -288,6 +288,41 @@ section .delay-show.show {
 
 #shakaCircle > svg {
   transition: fill var(--transition);
+}
+
+.mini-nav {
+  position: sticky;
+  top: 0;
+  margin-left: -20px;
+  padding-top: var(--padding-2);
+  height: 65px;
+  overflow: visible;
+
+  --blur: blur(7px);
+  --gradient: linear-gradient(
+    to bottom,
+    var(--color-base-dark) 0%,
+    var(--color-base-dark) 65%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.mini-nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  mask-image: var(--gradient);
+  -webkit-mask-image: var(--gradient);
+  z-index: -1;
+}
+
+.mini-nav > a {
+  width: fit-content;
 }
 
 /* Faux Tailwind / Bootstrap */
@@ -498,6 +533,27 @@ section .delay-show.show {
   .grid-container.grid-reading {
     grid-template-columns: 1fr;
   }
-}
 
-/* Custom Highlight.js theme */
+  .mini-nav {
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    right: 0;
+    margin-left: 0px;
+    margin: var(--margin-1);
+    padding: 0px;
+    overflow: visible;
+    height: fit-content;
+    background-color: var(--color-font-primary);
+    border-radius: var(--border-round);
+  }
+  .mini-nav > a {
+    color: var(--color-base);
+    padding: var(--padding-1) var(--padding-2);
+    border-radius: var(--border-round);
+  }
+
+  .mini-nav::before {
+    content: none;
+  }
+}
