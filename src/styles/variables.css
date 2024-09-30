@@ -8,9 +8,10 @@
   --font-size-heading-2: calc(18 / 16 * 1rem);
   --font-size-heading-3: calc(16 / 16 * 1rem);
   --font-size-paragraph: calc(14 / 16 * 1rem);
+  --font-line-height-supercushy: calc(32 / 16 * 1rem);
   --font-line-height-cushy: calc(24 / 16 * 1rem);
-  --font-line-height-relaxed: 1rem;
-  --font-line-height-normal: 1;
+  --font-line-height-relaxed: calc(20 / 16 * 1rem);
+  --font-line-height-normal: 1rem;
   --letter-spacing-comfortable: 0.005em;
 
   --color-base-dark: rgb(245, 245, 245);

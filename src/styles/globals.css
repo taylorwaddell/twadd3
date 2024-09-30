@@ -93,6 +93,12 @@ section .delay-show.show {
   transform: translateY(0);
 }
 
+.reader > p {
+  font-size: var(--font-size-paragraph);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-line-height-relaxed);
+}
+
 .reader a {
   text-decoration: underline;
 }
@@ -323,6 +329,39 @@ section .delay-show.show {
 
 .mini-nav > a {
   width: fit-content;
+}
+
+table {
+  width: fit-content;
+  border-collapse: collapse;
+  margin-bottom: var(--margin-1);
+  font-size: var(--font-size-paragraph);
+}
+
+th {
+  padding: var(--padding-1) var(--padding-3);
+  border: 1px solid var(--color-font-muted);
+  font-weight: var(--font-weight-bold);
+}
+
+td {
+  padding: var(--padding-1) var(--padding-3);
+  border: 1px solid var(--color-font-muted);
+}
+
+blockquote {
+  margin: var(--margin-1) 0;
+  padding-left: var(--padding-3);
+  border-left: 3px solid var(--color-font-muted);
+  font-style: italic;
+}
+
+blockquote > p {
+  line-height: var(--font-line-height-cushy);
+}
+
+ul {
+  font-size: var(--font-size-paragraph);
 }
 
 /* Faux Tailwind / Bootstrap */

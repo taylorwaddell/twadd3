@@ -1,13 +1,15 @@
 #### todo
 
-- [ ] writing card
-- [ ] project card
+- [x] writing card
+- [x] project card
   - [ ] add date info
-- [ ] blog post
-- [ ] nav
-- [ ] stack svg icons
-- [ ] cta button
-- [ ] social button (small & large)
-  - [ ] large used in nav
-  - [ ] small used in project card
+- [x] blog post
+- [x] nav
+- [x] stack svg icons
+- [x] cta button
+- [x] social button (small & large)
+  - [x] large used in nav
+  - [x] small used in project card
 - [ ] tooltip
+- [ ] add transition to outlines on cards
+- [ ] fade in cards
