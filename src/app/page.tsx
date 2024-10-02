@@ -4,7 +4,6 @@ import Link from "next/link";
 import ProjectCard from "~/components/ProjectCard";
 import { Projects } from "~/data/Projects";
 import WritingCard from "~/components/WritingCard";
-import { camelToHuman } from "~/utilites";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -31,7 +30,7 @@ function getWritings() {
 
   return files.map((file) => {
     const base = file.toString().replace(".mdx", "");
-    return { title: camelToHuman(base.replace("-", " ")), slug: base };
+    return { title: base.replace(/-/g, " "), slug: base };
   });
 }
 

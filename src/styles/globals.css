@@ -444,6 +444,10 @@ ul {
   margin-bottom: 0px;
 }
 
+.text-muted {
+  color: var(--color-font-muted);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
