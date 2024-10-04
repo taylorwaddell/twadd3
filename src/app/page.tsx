@@ -5,6 +5,7 @@ import ProjectCard from "~/components/ProjectCard";
 import { Projects } from "~/data/Projects";
 import WritingCard from "~/components/WritingCard";
 import fs from "node:fs";
+import matter from "gray-matter";
 import path from "node:path";
 
 const contentSource = "src/app/writing/content";
@@ -28,10 +29,18 @@ function getWritings() {
     files.push(target);
   }
 
-  return files.map((file) => {
+  const writings = files.map((file) => {
+    const content = fs.readFileSync(
+      path.join(process.cwd(), contentSource, file.toString()),
+      "utf8"
+    );
+    const { data } = matter(content);
+
     const base = file.toString().replace(".mdx", "");
-    return { title: base.replace(/-/g, " "), slug: base };
+    return { title: base.replace(/-/g, " "), slug: base, data: data };
   });
+
+  return writings.sort((a, b) => b.data.date - a.data.date);
 }
 
 export default function Home() {
