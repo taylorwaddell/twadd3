@@ -1,4 +1,5 @@
 import CTA from "~/components/CTA";
+import { type Metadata } from "next/types";
 import { compileMDX } from "next-mdx-remote/rsc";
 import fs from "node:fs";
 import path from "node:path";
@@ -41,6 +42,11 @@ export function generateStaticParams() {
   }));
 }
 
+export const metadata: Metadata = {
+  title: "twadd",
+  description: "A twadd blog post.",
+};
+
 export default async function Page({ params }: Params) {
   const source = fs.readFileSync(
     path.join(process.cwd(), contentSource, params.slug.join("/")) + ".mdx",
@@ -49,7 +55,7 @@ export default async function Page({ params }: Params) {
 
   const components = {};
 
-  const { content } = await compileMDX({
+  const { content, frontmatter } = await compileMDX({
     source,
     options: {
       mdxOptions: {
@@ -61,12 +67,23 @@ export default async function Page({ params }: Params) {
     components,
   });
 
+  const pageTitle = frontmatter.title as string;
+  const description = frontmatter.description as string;
+  const publishDate = frontmatter.date as string;
+
+  metadata.title = pageTitle;
+  metadata.description = description;
+
   return (
     <>
       <div className="mini-nav">
         <CTA label="Back" href={"/"} leftArrow={true} />
       </div>
-      <div className="reader">{content}</div>
+      <article className="reader">
+        <h1>{pageTitle}</h1>
+        <em className="text-muted">{publishDate}</em>
+        <div>{content}</div>
+      </article>
     </>
   );
 }

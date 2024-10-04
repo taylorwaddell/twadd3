@@ -7,7 +7,7 @@ export const Projects: ProjectCardProps[] = [
       "My little piece of the internet. Built with the basics for optimal speed and a fun challenge.",
     linkProp: {
       label: "View on GitHub",
-      href: "https://www.figma.com/file/BJ9e0q7IItXt5P0uPIzhoF/twadd.dev-2.0?type=design&node-id=0%3A1&mode=design&t=jAMtdG4WF2jfh0pE-1",
+      href: "https://github.com/taylorwaddell/twadd-dev-2.0",
     },
     figmaFile:
       "https://www.figma.com/file/BJ9e0q7IItXt5P0uPIzhoF/twadd.dev-2.0?type=design&node-id=0%3A1&mode=design&t=jAMtdG4WF2jfh0pE-1",
