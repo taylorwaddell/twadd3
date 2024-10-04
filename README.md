@@ -13,4 +13,4 @@
 - [ ] tooltip
 - [ ] add transition to outlines on cards
 - [ ] fade in cards
-- [ ] sort writings by date
+- [x] sort writings by date
