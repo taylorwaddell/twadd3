@@ -1,3 +1,9 @@
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@radix-ui/react-tooltip";
+
 import React from "react";
 
 export const Shaka: React.FC = () => {
@@ -314,7 +320,16 @@ export const IconDisplay: React.FC<{ stackLabel: StackOptionLabel }> = ({
   stackLabel,
 }) => {
   const IconComponent = StackIcons[stackLabel];
-  return <>{IconComponent && <IconComponent />}</>;
+  return (
+    <Tooltip>
+      <TooltipTrigger asChild>
+        {IconComponent && <IconComponent />}
+      </TooltipTrigger>
+      <TooltipContent className="tooltip">
+        {getStackDescription(stackLabel)}
+      </TooltipContent>
+    </Tooltip>
+  );
 };
 
 export const FigmaIcon: React.FC = () => {
@@ -334,3 +349,14 @@ export const FigmaIcon: React.FC = () => {
     </svg>
   );
 };
+
+function getStackDescription(label: StackOptionLabel) {
+  switch (label) {
+    case "FramerMotion":
+      return "Framer Motion";
+    case "Next":
+      return "Next.js";
+    default:
+      return label;
+  }
+}

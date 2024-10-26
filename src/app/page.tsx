@@ -1,4 +1,9 @@
 import { Github, ReadCV, Shaka, X } from "~/icons";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@radix-ui/react-tooltip";
 
 import Link from "next/link";
 import ProjectCard from "~/components/ProjectCard";
@@ -71,33 +76,48 @@ export default function Home() {
           <Shaka />
         </div>
         <div className="flex gap-1">
-          <Link
-            className="button button-icon flex justify-center align-center"
-            data-tooltip="Read.cv"
-            aria-label="Read.cv"
-            href="https://read.cv/twadd"
-            target="_blank"
-          >
-            <ReadCV />
-          </Link>
-          <Link
-            className="button button-icon flex justify-center align-center"
-            data-tooltip="Github"
-            aria-label="Github"
-            href="https://github.com/taylorwaddell"
-            target="_blank"
-          >
-            <Github />
-          </Link>
-          <Link
-            className="button button-icon flex justify-center align-center"
-            data-tooltip="X"
-            aria-label="X"
-            href="https://x.com/t__wadd"
-            target="_blank"
-          >
-            <X />
-          </Link>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Link
+                className="button button-icon flex justify-center align-center"
+                data-tooltip="Read.cv"
+                aria-label="Read.cv"
+                href="https://read.cv/twadd"
+                target="_blank"
+              >
+                <ReadCV />
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent className="tooltip">Read.cv</TooltipContent>
+          </Tooltip>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Link
+                className="button button-icon flex justify-center align-center"
+                data-tooltip="Github"
+                aria-label="Github"
+                href="https://github.com/taylorwaddell"
+                target="_blank"
+              >
+                <Github />
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent className="tooltip">Github</TooltipContent>
+          </Tooltip>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Link
+                className="button button-icon flex justify-center align-center"
+                data-tooltip="X"
+                aria-label="X"
+                href="https://x.com/t__wadd"
+                target="_blank"
+              >
+                <X />
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent className="tooltip">X</TooltipContent>
+          </Tooltip>
         </div>
       </header>
       <main className="grid-container">

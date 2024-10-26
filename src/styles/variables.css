@@ -8,6 +8,7 @@
   --font-size-heading-2: calc(20 / 16 * 1rem);
   --font-size-heading-3: calc(18 / 16 * 1rem);
   --font-size-paragraph: calc(1rem);
+  --font-size-small: calc(14 / 16 * 1rem);
   --font-line-height-supercushy: calc(32 / 16 * 1rem);
   --font-line-height-cushy: calc(24 / 16 * 1rem);
   --font-line-height-relaxed: calc(20 / 16 * 1rem);
