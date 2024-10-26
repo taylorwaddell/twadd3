@@ -11,7 +11,6 @@ body {
   padding-top: calc(100% / 65);
   width: 825px;
   margin: 0 auto;
-  position: relative;
 }
 
 *:focus {
@@ -44,7 +43,7 @@ h3 {
 
 p {
   font-size: var(--font-size-paragraph);
-  font-weight: var(--font-weight-extralight);
+  font-weight: var(--font-weight-regular);
   line-height: var(--font-line-height-relaxed);
 }
 
@@ -60,11 +59,25 @@ strong {
   letter-spacing: var(--letter-spacing-comfortable);
 }
 
+#follower {
+  position: absolute;
+  background-color: var(--color-base-dark);
+  border: var(--border-actionable);
+  color: var(--color-font-primary);
+  font-size: var(--font-size-paragraph);
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1000;
+  white-space: nowrap;
+  transform: translateX(15%) translateY(60%);
+}
+
 .card {
   border-radius: var(--border-round);
   border: var(--border-actionable);
   background-color: var(--color-base-light);
   padding: var(--padding-2);
+  position: relative;
 
   transition: border-color var(--transition);
 }
@@ -446,6 +459,18 @@ ul {
 
 .text-muted {
   color: var(--color-font-muted);
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.text-green {
+  color: var(--color-green);
 }
 
 .sr-only {

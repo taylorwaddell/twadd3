@@ -4,10 +4,10 @@
   --font-weight-medium: 700;
   --font-weight-bold: 900;
 
-  --font-size-heading-1: calc(20 / 16 * 1rem);
-  --font-size-heading-2: calc(18 / 16 * 1rem);
-  --font-size-heading-3: calc(16 / 16 * 1rem);
-  --font-size-paragraph: calc(14 / 16 * 1rem);
+  --font-size-heading-1: calc(22 / 16 * 1rem);
+  --font-size-heading-2: calc(20 / 16 * 1rem);
+  --font-size-heading-3: calc(18 / 16 * 1rem);
+  --font-size-paragraph: calc(1rem);
   --font-line-height-supercushy: calc(32 / 16 * 1rem);
   --font-line-height-cushy: calc(24 / 16 * 1rem);
   --font-line-height-relaxed: calc(20 / 16 * 1rem);
@@ -15,15 +15,15 @@
   --letter-spacing-comfortable: 0.005em;
 
   --color-base-dark: rgb(245, 245, 245);
-  --color-base: rgb(213, 213, 213);
-  --color-base-light: rgb(206, 206, 206);
-  --color-font-lighter: rgb(190, 190, 190);
+  --color-base: rgb(243, 243, 243);
+  --color-base-light: rgb(234, 234, 234);
+  --color-font-lighter: rgb(222, 222, 222);
   --color-green: rgb(7 164 143);
   --color-orange: rgba(227, 91, 6, 0.95);
   --color-orange-50: rgba(227, 91, 6, 0.5);
 
   --color-font-primary: rgb(36, 36, 36);
-  --color-font-muted: rgb(170 170 170);
+  --color-font-muted: rgb(196, 196, 196);
 
   --border-round-barely: 2px;
   --border-round: 5px;
