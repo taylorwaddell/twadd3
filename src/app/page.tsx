@@ -126,7 +126,7 @@ export default function Home() {
             <h1>About</h1>
             <p className="cushy delay-show">
               I&apos;m <strong className="italics">Taylor Waddell</strong>, a{" "}
-              <strong className="italics">UX Developer</strong> at{" "}
+              <strong className="italics">UX Developer II</strong> at{" "}
               <a href="https://verisglobal.com/" target="_blank">
                 Veris Global
               </a>
