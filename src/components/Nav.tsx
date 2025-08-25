@@ -1,4 +1,4 @@
-import { Github, ReadCV, Shaka, X } from "~/icons";
+import { Github, Shaka, X } from "~/icons";
 import {
   Tooltip,
   TooltipContent,
@@ -14,20 +14,6 @@ export default function Nav() {
         <Shaka />
       </div>
       <div className="flex gap-1">
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link
-              className="button button-icon flex justify-center align-center"
-              data-tooltip="Read.cv"
-              aria-label="Read.cv"
-              href="https://read.cv/twadd"
-              target="_blank"
-            >
-              <ReadCV />
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent className="tooltip">Read.cv</TooltipContent>
-        </Tooltip>
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
