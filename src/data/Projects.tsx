@@ -2,6 +2,17 @@ import type { ProjectCardProps } from "~/components/ProjectCard";
 
 export const Projects: ProjectCardProps[] = [
   {
+    title: "Remembrall",
+    description:
+      "AI-powered personal knowledge base for capturing and organizing thoughts with intelligent tagging and full-text search.",
+    linkProp: {
+      label: "Check it out",
+      href: "https://www.remembrall.space",
+    },
+    githubRepo: "https://github.com/taylorwaddell/remembrall",
+    stackLabels: ["Next", "TypeScript"],
+  },
+  {
     title: "twadd.dev",
     description:
       "My little piece of the internet. Built with the basics for optimal speed and a fun challenge.",
@@ -23,15 +34,15 @@ export const Projects: ProjectCardProps[] = [
       href: "https://www.xspecialties.com/",
     },
   },
-  {
-    title: "Dynamic Island",
-    description:
-      "Got my hands dirty with framer motion attempting to recreate the iconic dynamic island. Inspired by @thomasauros.",
-    linkProp: {
-      label: "Check it out",
-      href: "https://dynamic-island-gules.vercel.app/",
-    },
-    githubRepo: "https://github.com/taylorwaddell/dynamic-island",
-    stackLabels: ["TypeScript", "Next", "FramerMotion"],
-  },
+  // {
+  //   title: "Dynamic Island",
+  //   description:
+  //     "Got my hands dirty with framer motion attempting to recreate the iconic dynamic island. Inspired by @thomasauros.",
+  //   linkProp: {
+  //     label: "Check it out",
+  //     href: "https://dynamic-island-gules.vercel.app/",
+  //   },
+  //   githubRepo: "https://github.com/taylorwaddell/dynamic-island",
+  //   stackLabels: ["TypeScript", "Next", "FramerMotion"],
+  // },
 ];
