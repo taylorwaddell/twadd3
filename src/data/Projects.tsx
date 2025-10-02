@@ -28,7 +28,7 @@ export const Projects: ProjectCardProps[] = [
   {
     title: "X Specialties",
     description:
-      "Designed and developed a the visual identity, including logo, slogan, color scheme, and website for a construction supplies company using Figma, Adobe Illustrator, and Webflow.",
+      "Designed and developed the visual identity, including logo, slogan, color scheme, and website for a construction supplies company using Figma, Adobe Illustrator, and Webflow.",
     linkProp: {
       label: "Check it out",
       href: "https://www.xspecialties.com/",
