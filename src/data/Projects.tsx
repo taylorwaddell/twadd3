@@ -15,7 +15,7 @@ export const Projects: ProjectCardProps[] = [
   {
     title: "twadd.dev",
     description:
-      "My little piece of the internet. Built with the basics for optimal speed and a fun challenge.",
+      "My little piece of the internet. Built with Next.js for optimal speed and a fun challenge.",
     linkProp: {
       label: "View on GitHub",
       href: "https://github.com/taylorwaddell/twadd-dev-2.0",
